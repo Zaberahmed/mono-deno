@@ -123,16 +123,19 @@ deno task deploy
 
 ### GitHub Actions Deployment
 
-The template includes GitHub Actions workflows that automatically deploy to Deno Deploy when you push to the main branch.
+This template includes a disabled GitHub Actions workflow that can be enabled to automatically deploy to Deno Deploy when you push to the main branch.
 
-1. Create your Deno Deploy projects:
+To enable the GitHub Actions workflow:
+
+1. Locate the file `.github/workflows/deploy.yml.disabled` in your repository
+2. Remove the `.disabled` extension so the filename becomes `deploy.yml`
+3. Create your Deno Deploy projects:
    - `deno-monorepo-api` for the API server
    - `deno-monorepo-web` for the web application
-
-2. Set up GitHub repository variables:
+4. Set up GitHub repository variables:
    - `VITE_API_URL`: The URL of your deployed API server (e.g., `https://deno-monorepo-api.deno.dev`)
-
-3. Push to the main branch to trigger deployment.
+5. Make sure to update the project names in the workflow file if you're using different project names in Deno Deploy
+6. Push to the main branch to trigger deployment
 
 ## Customizing
 
