@@ -1,0 +1,51 @@
+{
+  "name": "@scope/web",
+  "exports": {
+    ".": "./src/main.tsx",
+    "./components": "./src/components/index.ts",
+    "./hooks": "./src/hooks/index.ts",
+    "./utils": "./src/utils/index.ts"
+  },
+  "tasks": {
+    "dev": "deno run -A --node-modules-dir npm:vite --mode dev",
+    "build": "deno run -A --node-modules-dir npm:vite build --mode production",
+    "preview": "deno run -A --node-modules-dir npm:vite preview --mode production",
+    "serve": "deno run --allow-net --allow-read jsr:@std/http@1/file-server dist/"
+  },
+  "compilerOptions": {
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable",
+      "deno.ns"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "jsxImportSourceTypes": "@types/react"
+  },
+  "imports": {
+    "@shared/": "../shared/",
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
+    "@tanstack/react-query": "npm:@tanstack/react-query@^5.75.1",
+    "@trpc/client": "npm:@trpc/client@^11.1.2",
+    "@trpc/react-query": "npm:@trpc/react-query@^11.1.2",
+    "@trpc/tanstack-react-query": "npm:@trpc/tanstack-react-query@^11.1.2",
+    "@types/react": "npm:@types/react@^19.0.10",
+    "@types/react-dom": "npm:@types/react-dom@^19.0.4",
+    "@vitejs/plugin-react-swc": "npm:@vitejs/plugin-react-swc@^3.8.0",
+    "react": "npm:react@^19.0.0",
+    "react-dom": "npm:react-dom@^19.0.0",
+    "vite": "npm:vite@^6.1.1"
+  },
+  "deploy": {
+    "project": "mono-deno",
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [
+      "apps/web",
+      "apps/shared"
+    ],
+    "entrypoint": "apps/web/server.ts"
+  }
+}
