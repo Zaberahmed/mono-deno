@@ -1,5 +1,5 @@
 {
-  "name": "@scope/shared",
+  "name": "@deno-monorepo/shared",
   "exports": {
     ".": "./index.ts",
     "./types": "./types/index.ts"

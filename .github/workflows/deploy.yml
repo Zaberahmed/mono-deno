@@ -32,7 +32,7 @@ jobs:
         uses: denoland/deployctl@v1
 
         with:
-          project: "mono-deno-api"
+          project: "deno-monorepo-api"
           entrypoint: "apps/api/index.ts"
           include: apps/api/**, apps/shared/**
           exclude: node_modules
@@ -41,7 +41,7 @@ jobs:
         uses: denoland/deployctl@v1
 
         with:
-          project: "mono-deno"
+          project: "deno-monorepo-web"
           entrypoint: "apps/web/server.ts"
           include: apps/web/**, apps/shared/**
           exclude: node_modules

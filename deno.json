@@ -1,12 +1,12 @@
 {
   "tasks": {
     "dev:api": "deno task --cwd=apps/api dev",
-    "deploy:api": "deployctl deploy --project=mono-deno-api --prod apps/api/index.ts --env-file=.env.production --include=apps/api,apps/shared --exclude=node_modules",
+    "deploy:api": "deployctl deploy --project=deno-monorepo-api --prod apps/api/index.ts --env-file=.env.production --include=apps/api,apps/shared --exclude=node_modules",
     "dev:web": "deno task --cwd=apps/web dev",
     "build:web": "deno task --cwd=apps/web build",
     "preview:web": "deno task --cwd=apps/web preview",
     "serve:web": "deno task --cwd=apps/web serve",
-    "deploy:web": "deno task build:web && deployctl deploy --project=mono-deno --prod apps/web/server.ts --env-file=.env.production --include=apps/web,apps/shared --exclude=node_modules",
+    "deploy:web": "deno task build:web && deployctl deploy --project=deno-monorepo-web --prod apps/web/server.ts --env-file=.env.production --include=apps/web,apps/shared --exclude=node_modules",
     "dev": "deno task dev:api & deno task dev:web",
     "test": "deno test",
     "lint": "deno lint",
@@ -21,7 +21,7 @@
   ],
   "deploy": {
     "api": {
-      "project": "mono-deno-api",
+      "project": "deno-monorepo-api",
       "exclude": [
         "**/node_modules"
       ],
@@ -32,7 +32,7 @@
       "entrypoint": "apps/api/index.ts"
     },
     "web": {
-      "project": "mono-deno",
+      "project": "deno-monorepo-web",
       "exclude": [
         "**/node_modules"
       ],

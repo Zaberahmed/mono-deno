@@ -1,5 +1,5 @@
 {
-  "name": "@scope/web",
+  "name": "@deno-monorepo/web",
   "exports": {
     ".": "./src/main.tsx",
     "./components": "./src/components/index.ts",
@@ -38,7 +38,7 @@
     "vite": "npm:vite@^6.1.1"
   },
   "deploy": {
-    "project": "mono-deno",
+    "project": "deno-monorepo-web",
     "exclude": [
       "**/node_modules"
     ],

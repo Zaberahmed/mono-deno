@@ -1,5 +1,5 @@
 {
-  "name": "@scope/api",
+  "name": "@deno-monorepo/api",
   "exports": {
     ".": "./index.ts",
     "./trpc": "./trpc/index.ts"
@@ -14,7 +14,7 @@
     "cors": "npm:cors@^2.8.5"
   },
   "deploy": {
-    "project": "mono-deno-api",
+    "project": "deno-monorepo-api",
     "exclude": [
       "**/node_modules"
     ],
