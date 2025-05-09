@@ -34,7 +34,7 @@
   "deploy": {
     "project": "deno-monorepo-web",
     "exclude": ["**/node_modules"],
-    "include": ["apps/web"],
+    "include": ["apps/web", "packages/shadcn"],
     "entrypoint": "apps/web/server.ts"
   }
 }

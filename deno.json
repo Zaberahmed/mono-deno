@@ -6,7 +6,7 @@
     "build:web": "deno task --cwd=apps/web build",
     "preview:web": "deno task --cwd=apps/web preview",
     "serve:web": "deno task --cwd=apps/web serve",
-    "deploy:web": "deno task build:web && deployctl deploy --project=deno-monorepo-web --prod apps/web/server.ts --env-file=.env.production --include=apps/web --exclude=node_modules",
+    "deploy:web": "deno task build:web && deployctl deploy --project=deno-monorepo-web --prod apps/web/server.ts --env-file=.env.production --include=apps/web,packages/shadcn --exclude=node_modules",
     "dev": "deno task dev:api & deno task dev:web",
     "test": "deno test",
     "lint": "deno lint",
@@ -14,7 +14,7 @@
     "deploy": "deno task deploy:api & deno task deploy:web"
   },
   "nodeModulesDir": "auto",
-  "workspace": ["apps/api", "apps/web"],
+  "workspace": ["apps/api", "apps/web", "packages/shadcn"],
   "deploy": {
     "api": {
       "project": "deno-monorepo-api",
@@ -25,7 +25,7 @@
     "web": {
       "project": "deno-monorepo-web",
       "exclude": ["**/node_modules"],
-      "include": ["apps/web"],
+      "include": ["apps/web", "packages/shadcn"],
       "entrypoint": "apps/web/server.ts"
     }
   }

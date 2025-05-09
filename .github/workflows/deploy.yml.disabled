@@ -36,7 +36,7 @@ jobs:
         with:
           project: "deno-monorepo-api"
           entrypoint: "apps/api/index.ts"
-          include: apps/api/**, apps/shared/**
+          include: apps/api/**
           exclude: node_modules
 
       - name: Deploy Web to Deno Deploy
@@ -45,5 +45,5 @@ jobs:
         with:
           project: "deno-monorepo-web"
           entrypoint: "apps/web/server.ts"
-          include: apps/web/**, apps/shared/**
+          include: apps/web/**, packages/shadcn
           exclude: node_modules

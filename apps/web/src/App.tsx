@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import reactLogo from "./assets/react.svg";
 import { trpc } from "./configs/trpc.ts";
+import { Button } from "@deno-monorepo/shadcn/button";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -41,6 +42,15 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <Button
+        variant="default"
+        size="default"
+        className="bg-red-500 text-white"
+        onClick={() => {
+          alert("Hello from Shadcn UI!");
+        }}>
+        Hello from Shadcn UI!
+      </Button>
     </>
   );
 }

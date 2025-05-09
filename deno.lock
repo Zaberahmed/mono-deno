@@ -2,6 +2,9 @@
   "version": "5",
   "specifiers": {
     "npm:@deno/vite-plugin@^1.0.4": "1.0.4_vite@6.3.2__picomatch@4.0.2_@types+node@22.12.0",
+    "npm:@radix-ui/react-slot@*": "1.2.2_@types+react@19.1.2_react@19.1.0",
+    "npm:@radix-ui/react-slot@^1.0.2": "1.2.2_@types+react@19.1.2_react@19.1.0",
+    "npm:@radix-ui/react-slot@^1.2.2": "1.2.2_@types+react@19.1.2_react@19.1.0",
     "npm:@tanstack/react-query@5.75.1": "5.75.1_react@19.1.0",
     "npm:@tanstack/react-query@^5.75.1": "5.75.1_react@19.1.0",
     "npm:@trpc/client@11.1.2": "11.1.2_@trpc+server@11.1.2__typescript@5.8.3_typescript@5.8.3",
@@ -14,9 +17,19 @@
     "npm:@types/react-dom@^19.0.4": "19.1.2_@types+react@19.1.2",
     "npm:@types/react@^19.0.10": "19.1.2",
     "npm:@vitejs/plugin-react-swc@^3.8.0": "3.9.0_vite@6.3.2__picomatch@4.0.2_@types+node@22.12.0",
+    "npm:class-variance-authority@*": "0.7.1",
+    "npm:class-variance-authority@0.7": "0.7.1",
+    "npm:class-variance-authority@~0.7.1": "0.7.1",
+    "npm:clsx@2": "2.1.1",
+    "npm:clsx@^2.1.1": "2.1.1",
     "npm:cors@^2.8.5": "2.8.5",
+    "npm:lucide-react@0.507": "0.507.0_react@19.1.0",
     "npm:react-dom@19": "19.1.0_react@19.1.0",
+    "npm:react@*": "19.1.0",
     "npm:react@19": "19.1.0",
+    "npm:tailwind-merge@^2.2.0": "2.6.0",
+    "npm:tailwind-merge@^3.2.0": "3.2.0",
+    "npm:tw-animate-css@^1.2.9": "1.2.9",
     "npm:vite@*": "6.3.2_picomatch@4.0.2_@types+node@22.12.0",
     "npm:vite@^6.1.1": "6.3.2_picomatch@4.0.2_@types+node@22.12.0"
   },
@@ -157,6 +170,27 @@
       "integrity": "sha512-kM3HKb16VIXZyIeVrM1ygYmZBKybX8N4p754bw390wGO3Tf2j4L2/WYL+4suWujpgf6GBYs3jv7TyUivdd05JA==",
       "os": ["win32"],
       "cpu": ["x64"]
+    },
+    "@radix-ui/react-compose-refs@1.1.2_@types+react@19.1.2_react@19.1.0": {
+      "integrity": "sha512-z4eqJvfiNnFMHIIvXP3CY57y2WJs5g2v3X0zm9mEJkrkNv4rDxu+sg9Jh8EkXyeqBkB7SOcboo9dMVqhyrACIg==",
+      "dependencies": [
+        "@types/react",
+        "react"
+      ],
+      "optionalPeers": [
+        "@types/react"
+      ]
+    },
+    "@radix-ui/react-slot@1.2.2_@types+react@19.1.2_react@19.1.0": {
+      "integrity": "sha512-y7TBO4xN4Y94FvcWIOIh18fM4R1A8S4q1jhoz4PNzOoHsFcN8pogcFmZrTYAm4F9VRUrWP/Mw7xSKybIeRI+CQ==",
+      "dependencies": [
+        "@radix-ui/react-compose-refs",
+        "@types/react",
+        "react"
+      ],
+      "optionalPeers": [
+        "@types/react"
+      ]
     },
     "@rollup/rollup-android-arm-eabi@4.40.0": {
       "integrity": "sha512-+Fbls/diZ0RDerhE8kyC6hjADCXA1K4yVNlH0EYfd2XjyH0UGgzaQ8MlT0pCXAThfxv3QUAczHaL+qSv1E4/Cg==",
@@ -423,6 +457,15 @@
         "vite@6.3.2_picomatch@4.0.2_@types+node@22.12.0"
       ]
     },
+    "class-variance-authority@0.7.1": {
+      "integrity": "sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==",
+      "dependencies": [
+        "clsx"
+      ]
+    },
+    "clsx@2.1.1": {
+      "integrity": "sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA=="
+    },
     "cors@2.8.5": {
       "integrity": "sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==",
       "dependencies": [
@@ -478,6 +521,12 @@
       "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==",
       "os": ["darwin"],
       "scripts": true
+    },
+    "lucide-react@0.507.0_react@19.1.0": {
+      "integrity": "sha512-XfgE6gvAHwAtnbUvWiTTHx4S3VGR+cUJHEc0vrh9Ogu672I1Tue2+Cp/8JJqpytgcBHAB1FVI297W4XGNwc2dQ==",
+      "dependencies": [
+        "react"
+      ]
     },
     "nanoid@3.3.11": {
       "integrity": "sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==",
@@ -546,12 +595,21 @@
     "source-map-js@1.2.1": {
       "integrity": "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="
     },
+    "tailwind-merge@2.6.0": {
+      "integrity": "sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA=="
+    },
+    "tailwind-merge@3.2.0": {
+      "integrity": "sha512-FQT/OVqCD+7edmmJpsgCsY820RTD5AkBryuG5IUqR5YQZSdj5xlH5nLgH7YPths7WsLPSpSBNneJdM8aS8aeFA=="
+    },
     "tinyglobby@0.2.13_picomatch@4.0.2": {
       "integrity": "sha512-mEwzpUgrLySlveBwEVDMKk5B57bhLPYovRfPAXD5gA/98Opn0rCDj3GtLwFvCvH5RK9uPCExUROW5NjDwvqkxw==",
       "dependencies": [
         "fdir",
         "picomatch"
       ]
+    },
+    "tw-animate-css@1.2.9": {
+      "integrity": "sha512-9O4k1at9pMQff9EAcCEuy1UNO43JmaPQvq+0lwza9Y0BQ6LB38NiMj+qHqjoQf40355MX+gs6wtlR6H9WsSXFg=="
     },
     "typescript@5.8.3": {
       "integrity": "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==",
@@ -689,6 +747,25 @@
           "npm:react@19",
           "npm:vite@^6.1.1"
         ]
+      },
+      "packages/shadcn": {
+        "dependencies": [
+          "npm:@radix-ui/react-slot@^1.0.2",
+          "npm:class-variance-authority@0.7",
+          "npm:clsx@2",
+          "npm:react@19",
+          "npm:tailwind-merge@^2.2.0"
+        ],
+        "packageJson": {
+          "dependencies": [
+            "npm:@radix-ui/react-slot@^1.2.2",
+            "npm:class-variance-authority@~0.7.1",
+            "npm:clsx@^2.1.1",
+            "npm:lucide-react@0.507",
+            "npm:tailwind-merge@^3.2.0",
+            "npm:tw-animate-css@^1.2.9"
+          ]
+        }
       }
     }
   }
