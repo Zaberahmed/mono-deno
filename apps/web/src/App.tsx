@@ -10,7 +10,7 @@ function App() {
   const { data, error, isLoading } = trpc.hello.useQuery();
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
       <img src="/vite-deno.svg" alt="Vite with Deno" />
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -44,14 +44,12 @@ function App() {
       </p>
       <Button
         variant="default"
-        size="default"
-        className="bg-red-500 text-white"
         onClick={() => {
           alert("Hello from Shadcn UI!");
         }}>
         Hello from Shadcn UI!
       </Button>
-    </>
+    </div>
   );
 }
 
