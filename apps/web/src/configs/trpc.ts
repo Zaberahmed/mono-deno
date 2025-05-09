@@ -1,4 +1,4 @@
-import type { AppRouter } from "@shared/types/index.ts";
+import type { AppRouter } from "@deno-monorepo/api/routers/types.ts";
 import { httpBatchLink } from "@trpc/client";
 import { createTRPCReact } from "@trpc/react-query";
 
