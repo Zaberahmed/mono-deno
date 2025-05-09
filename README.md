@@ -1,4 +1,4 @@
-# Deno Monorepo Template with tRPC, React, Vite, and TanStack Query
+# Deno Monorepo Template with tRPC, React, Vite, TanStack Query, and Shadcn UI
 
 A full-stack monorepo template built with Deno for both frontend and backend, featuring modern tools and type-safe API communication between client and server.
 
@@ -9,6 +9,8 @@ A full-stack monorepo template built with Deno for both frontend and backend, fe
 - **tRPC Integration**: Type-safe API layer without schemas or code generation
 - **Vite + React**: Fast development experience with HMR
 - **TanStack Query**: Powerful data fetching and caching for React
+- **Shadcn UI**: Beautiful, accessible, and customizable React components
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
 - **Deno Deploy Ready**: Configured for easy deployment to Deno Deploy
 
 ## Project Structure
@@ -18,17 +20,24 @@ A full-stack monorepo template built with Deno for both frontend and backend, fe
 ├── apps/
 │   ├── api/                # Backend tRPC API server
 │   │   ├── trpc/           # tRPC configuration and routers
-│   │   └── index.ts        # Main entrypoint  
-│   ├── shared/             # Shared code between applications
-│   │   └── types/          # Shared TypeScript type definitions
+│   │   └── index.ts        # Main entrypoint
 │   └── web/                # Frontend React application
 │       ├── src/            # React application source code
 │       │   ├── configs/    # Configuration for trpc and react-query
-│       │   └── providers/  # React context providers
+│       │   ├── providers/  # React context providers
+│       │   └── constants/  # Application constants and shared values
+│       ├── tailwind.config.js # Tailwind CSS configuration
 │       └── vite.config.ts  # Vite configuration
-├── .github/                # GitHub Actions workflows
-├── deno.json               # Root workspace configuration
-└── .env.*.example          # Environment variable templates
+├── packages/
+│   └── shadcn/            # Shared UI component library
+│       ├── src/           # Source code for components
+│       │   ├── components/ # UI components built with Tailwind and Radix
+│       │   ├── lib/        # Utility functions
+│       │   └── styles/     # Global styles and CSS variables
+│       └── deno.json      # Package configuration
+├── .github/              # GitHub Actions workflows
+├── deno.json             # Root workspace configuration
+└── .env.*.example        # Environment variable templates
 ```
 
 ## Prerequisites
@@ -145,6 +154,14 @@ To enable the GitHub Actions workflow:
 2. Add your procedures to the router
 3. Add your router to `apps/api/trpc/routers/index.ts`
 4. Your new endpoints will be automatically available to the frontend through tRPC
+
+### Adding a new UI component
+
+This template uses Shadcn UI for components:
+
+1. Create a new component file in `packages/shadcn/src/components/ui/`
+2. Export the component in the package's `deno.json` exports
+3. Import and use the component in your web application
 
 ### Environment Variables
 
