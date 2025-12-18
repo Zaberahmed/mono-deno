@@ -49,7 +49,7 @@ A full-stack monorepo template built with Deno for both frontend and backend, fe
 1. **Clone the template**
 
    ```bash
-   git clone https://github.com/yourusername/deno-monorepo-template.git
+   git clone https://github.com/Zaberahmed/deno-monorepo-template.git
    cd deno-monorepo-template
    ```
 
